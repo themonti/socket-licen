@@ -23,9 +23,9 @@ def connect(sid, environ):
 
 @eio.on('message')
 def message(sid, data):
-    the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
+    the_time = datetime.now().strftime("%H:%M")
     print('{time}message from'.format(time=the_time), sid, data)
-    eio.send(sid, '{0} mensaje recibido por {1}: {2}'.format(the_time,sid,data), binary=False)
+    eio.send(sid, '[{0}] mensaje recibido por {1}: {2}'.format(the_time,sid,data), binary=False)
 
 
 

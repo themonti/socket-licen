@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+  <general>
+    <catalogentry>
+      <catalog>URN</catalog>
+      <entry>
+        <langstring>urn:ostyn.com:AFE980F6-DD3A-11DA-9B41-B622A1EF54342</langstring>
+      </entry>
+    </catalogentry>
+    <title>
+      <langstring>SCORM Diagnostic SCO</langstring>
+    </title>
+    <description>
+      <langstring>This package contains a single SCO that can be used to inspect and diagnose a SCORM runtime environment. When launched, the SCO recognizes whether it is running in a SCORM environment and displays information about the environment, including the windows encountered in a search for an API instance object using the standard API discovery algorithm. You can initialize and terminate a communication session with the SCORM API and you can exercise the API by playing with SetValue and GetValue with the parameters appropriate for the version of SCORM that was detected, or by playing a script.
+</langstring>
+    </description>
+    <keyword>
+      <langstring>Diagnostic</langstring>
+    </keyword>
+    <keyword>
+      <langstring>SCORM</langstring>
+    </keyword>
+    <keyword>
+      <langstring>SCO</langstring>
+    </keyword>
+  </general>
+  <lifecycle>
+    <version>
+      <langstring>1.99.5 beta</langstring>
+    </version>
+    <status>
+      <source>
+        <langstring xml:lang="x-none">LOMv1.0</langstring>
+      </source>
+      <value>
+        <langstring xml:lang="x-none">final</langstring>
+      </value>
+    </status>
+    <contribute>
+      <role>
+        <source>
+          <langstring xml:lang="x-none">LOMv1.0</langstring>
+        </source>
+        <value>
+          <langstring xml:lang="x-none">author</langstring>
+        </value>
+      </role>
+      <centity>
+        <vcard>
+BEGIN:VCARD
+FN:Claude Ostyn
+END:VCARD</vcard>
+      </centity>
+      <date>
+        <datetime>2007-01-19</datetime>
+      </date>
+    </contribute>
+  </lifecycle>
+  <metametadata>
+    <metadatascheme>ADL SCORM 1.2</metadatascheme>
+    <language>en-US</language>
+  </metametadata>
+  <technical>
+    <format>text/html</format>
+    <location type="URI">.</location>
+  </technical>
+  <rights>
+    <cost>
+      <source>
+        <langstring xml:lang="x-none">LOMv1.0</langstring>
+      </source>
+      <value>
+        <langstring xml:lang="x-none">No</langstring>
+      </value>
+    </cost>
+    <copyrightandotherrestrictions>
+      <source>
+        <langstring xml:lang="x-none">LOMv1.0</langstring>
+      </source>
+      <value>
+        <langstring xml:lang="x-none">Yes</langstring>
+      </value>
+    </copyrightandotherrestrictions>
+    <description>
+      <langstring>Can be used freely but author retains copyright.</langstring>
+    </description>
+  </rights>
+</lom>

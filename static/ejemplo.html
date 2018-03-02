@@ -5,12 +5,12 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script>
         $(document).ready(function() {
-            var socket = eio('http://server.test.com:5000');
+            var socket = eio('http://licencias-licencias.7e14.starter-us-west-2.openshiftapps.com/');
             socket.on('open', function() {
                 $('#log').append("Connected to server.<br>");
             });
             socket.on('message', function(data) {
-                $('#log').append("Server says: " + data + "<br>");
+                $('#log').append("Mensaje del servidor: " + data + "<br>");
             });
             socket.on('close', function() {
                 $('#log').append("Server closed the connection.<br>");
@@ -25,7 +25,7 @@
             $("#btnenviar").click(function() {
                 var val = $("#textenviar").val();
                 socket.send(val);
-                $('#logsend').append(val);
+                $('#logsend').append(val + "<br/>");
             });
         });
     </script>
