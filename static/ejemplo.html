@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <script src="engine.io.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            var socket = eio('http://server.test.com:5000');
+            socket.on('open', function() {
+                $('#log').append("Connected to server.<br>");
+            });
+            socket.on('message', function(data) {
+                $('#log').append("Server says: " + data + "<br>");
+            });
+            socket.on('close', function() {
+                $('#log').append("Server closed the connection.<br>");
+            });
+            /*
+            window.setInterval(function() {
+                $('#log').append("Sending message to server...<br>");
+                socket.send('hello from client side!');
+            }, 5000);
+*/
+
+            $("#btnenviar").click(function() {
+                var val = $("#textenviar").val();
+                socket.send(val);
+                $('#logsend').append(val);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>python-engineio example application</h1>
+
+    <p id="log"><b>Mensajes recibidos:</b><br/></p>
+
+    <hr/>
+    <p id="logsend"><b>Mensajes enviados:</b> <br/></p>
+    <hr>
+    <div>
+        <input type="text" id="textenviar" />
+        <input type="button" id="btnenviar" value="enviar" />
+    </div>
+
+
+</body>
+
+</html>
