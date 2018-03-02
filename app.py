@@ -52,9 +52,9 @@ if __name__ == '__main__':
         except ImportError:
             websocket = False
         if websocket:
-            pywsgi.WSGIServer(('', 5000), app,
+            pywsgi.WSGIServer(('', 8080), app,
                               handler_class=WebSocketHandler).serve_forever()
         else:
-            pywsgi.WSGIServer(('', 5000), app).serve_forever()
+            pywsgi.WSGIServer(('', 8080), app).serve_forever()
     else:
         print('Unknown async_mode: ' + eio.async_mode)
