@@ -37,12 +37,12 @@ def disconnect(sid):
 if __name__ == '__main__':
     if eio.async_mode == 'threading':
         # deploy with Werkzeug
-        app.run(threaded=True)
+        app.run(host='0.0.0.0', port=8080,threaded=True)
     elif eio.async_mode == 'eventlet':
         # deploy with eventlet
         import eventlet
         from eventlet import wsgi
-        wsgi.server(eventlet.listen(('', 5000)), app)
+        wsgi.server(eventlet.listen(('', 8080)), app)
     elif eio.async_mode == 'gevent':
         # deploy with gevent
         from gevent import pywsgi
